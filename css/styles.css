@@ -1,0 +1,128 @@
+/* Estilos generales */
+* {
+    background: #2b2d42;
+    color: #8d99ae;
+    font-size: 16px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 5px;
+    padding: 0;
+}
+
+/* Estilos para los encabezados */
+h1 {
+    font-size: 20px;
+    margin: 8px;
+    color: #23efbc;
+}
+
+h2 {
+    font-size: 16px;
+    margin: 6px;
+    color: #d90429;
+}
+
+h3 {
+    font-size: 16px;
+    margin:  6px;
+    color: #f0c618;
+}
+
+h4 {
+    font-size: 16px;
+    margin: 6px;
+    padding: 6px;
+    color: #dfca15;
+    box-shadow: 8px 8px 8px rgba(175, 31, 31, 0.5);
+    text-align: center;
+    text-transform: uppercase
+}
+
+p {
+    font-size: 16px;
+    margin: 16px;
+    padding: 6px;
+    color: #82dde0;
+    text-align: justify;
+}
+
+.estudio {
+    font-size: 16px;
+    margin: 6px;
+    padding: 6px;
+    color: #82dde0;
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+img {
+    width: auto;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(204, 42, 42, 0.932);
+    /* Sombra más sutil */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #23efbc;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 4px rgba(126, 120, 113, 0.932);
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #5a6153;
+    color: #4ce71d;
+    /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilos para las listas */
+ol {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+li {
+    margin: 16px;
+    padding: 6px;
+    color: #4ce71d;
+    text-align: center;
+    font-weight: bold;
+}
+/* Estilos para las tablas */
+table {
+    width: 50%;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+th, td {
+    padding: 6px;
+    height: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #8d99ae;
+}
+th  {
+    background-color: #a6d192;
+    color: #d68686;
+    font-weight: bold;
+    border-radius: 10px;
+}
+td {
+    background-color: #7d73af;
+    color: #d4bdb8;
+    font-weight: normal;
+    border-radius: 10px;
+}
