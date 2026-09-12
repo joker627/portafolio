@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uparshop | Detalles del Proyecto</title>
+    <link rel="icon" type="image/png" href="../img/icon/favicon.png?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light-mode');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="background-effect"></div>
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section class="project-detail-header">
+            <h2>Uparshop</h2>
+            <div class="subtitle">Plataforma de Comercio Electrónico</div>
+        </section>
+
+        <section class="project-body">
+
+            <div class="project-section">
+                <h3>Resumen del Proyecto</h3>
+                <p>Uparshop es una plataforma de comercio electrónico desarrollada como un proyecto académico
+                    colaborativo. El objetivo principal fue construir un backend robusto, escalable y seguro capaz de
+                    gestionar el inventario, usuarios y transacciones de una tienda virtual moderna.</p>
+            </div>
+
+            <div class="project-section">
+                <h3>El Problema</h3>
+                <p>El problema real del mercado es el alza abrupta de precios; es decir, los comercios de tecnología
+                    suelen subir exageradamente los costos, sobre todo en componentes de PC, afectando directamente al
+                    consumidor final y limitando el acceso a equipos de calidad.</p>
+            </div>
+
+            <div class="project-section">
+                <h3>La Solución</h3>
+                <p>Para resolver esto, decidí diseñar el backend utilizando <strong>Clean Architecture</strong>. Esto
+                    permitió separar las reglas de negocio de la infraestructura (bases de datos y endpoints web).</p>
+                <p>Utilicé <strong>FastAPI</strong> por su altísimo rendimiento y su validación automática de datos.
+                    Para la seguridad, implementé <strong>JSON Web Tokens (JWT)</strong>, asegurando que solo usuarios
+                    autenticados puedan realizar compras o acceder a rutas protegidas.</p>
+            </div>
+
+            <div class="project-section">
+                <h3>Lo que desarrollé (Mi Rol)</h3>
+                <ul>
+                    <li style="margin-bottom: 10px;">Diseñé e implementé la API REST desde cero usando Python y FastAPI.
+                    </li>
+                    <li style="margin-bottom: 10px;">Creé el modelo relacional de la base de datos en MySQL y escribí
+                        las consultas eficientes.</li>
+                    <li style="margin-bottom: 10px;">Desarrollé operaciones CRUD completas para la gestión de productos,
+                        categorías y cuentas de usuario.</li>
+                    <li style="margin-bottom: 10px;">Integré el sistema de login y seguridad basado en tokens JWT.</li>
+                    <li style="margin-bottom: 10px;">Manejé el versionamiento del código trabajando en equipo mediante
+                        Git y GitHub.</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Tecnologías Utilizadas</h3>
+                <div class="project-tech-list">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>MySQL</span>
+                    <span>JWT</span>
+                    <span>Git / GitHub</span>
+                    <span>Clean Architecture</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="https://uparshop.page/" target="_blank" class="btn-primary">
+                    <img src="../img/icon/dark/external-link.svg" alt="Visitar Web" class="project-icon"> Visitar Web
+                </a>
+                <a href="https://github.com/joker627/Uparshop" target="_blank" class="btn-primary btn-secondary">
+                    <img src="../img/icon/dark/github.svg" alt="Repositorio" class="project-icon"> Ver Repositorio
+                </a>
+                <a href="../index.html#projects" class="btn-primary btn-secondary">
+                    Volver a Proyectos
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="../js/script.js"></script>
+</body>
+
+</html>

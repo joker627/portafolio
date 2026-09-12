@@ -1,0 +1,129 @@
+﻿:root {
+    --bg-main: #050508;
+    /* Deep space black */
+    --bg-secondary: #0a0a10;
+    --bg-card: rgba(20, 20, 30, 0.4);
+    --text-primary: #f8f9fa;
+    --text-secondary: #a1a1aa;
+    --accent: #9b87f5;
+    --accent-glow: rgba(155, 135, 245, 0.4);
+    --font-sans: 'Inter', 'Outfit', 'Segoe UI', Roboto, Helvetica, sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --border-color: rgba(155, 135, 245, 0.15);
+    --bg-header: rgba(5, 5, 8, 0.7);
+    --bg-card-solid: #0f0f15;
+    --bg-gradient-end: rgba(20, 20, 30, 0.4);
+}
+
+:root.light-mode {
+    --bg-main: #f8f9fa;
+    --bg-secondary: #f0f0f4;
+    --bg-card: rgba(255, 255, 255, 0.7);
+    --bg-card-solid: #ffffff;
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --accent: #7c3aed;
+    --accent-glow: rgba(124, 58, 237, 0.2);
+    --border-color: rgba(124, 58, 237, 0.15);
+    --bg-header: rgba(248, 249, 250, 0.8);
+    --bg-gradient-end: rgba(230, 230, 240, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+    letter-spacing: 0.3px;
+}
+
+
+
+.btn-primary {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+.btn-small {
+    padding: 6px 14px;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-primary) !important;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.nav-active {
+    color: var(--accent) !important;
+}
+
+/* Animations */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.typewriter-target {
+    border-right: 2px solid var(--accent);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    padding-right: 5px;
+    animation: blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes blinkCursor {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--accent);
+    }
+}
+

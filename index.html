@@ -1,38 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<!-- Intenté centrar un <div> una vez... por eso descubrí que me gusta más el Backend. ala vrg me voy para cocina mejor jaaaa -->
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <title>Inicio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Dev | Portafolio</title>
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manueldev.tech/">
+    <meta property="og:title" content="Manuel Dev | Desarrollador Backend en Python">
+    <meta property="og:description"
+        content="Portafolio de Jorge Manuel Santana, Desarrollador Backend en Python, con conocimientos en Frontend para apoyar.">
+    <meta property="og:image" content="https://manueldev.tech/img/photo/perfil.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://manueldev.tech/">
+    <meta name="twitter:title" content="Manuel Dev | Desarrollador Backend en Python">
+    <meta name="twitter:description"
+        content="Portafolio de Jorge Manuel Santana, Desarrollador Backend en Python, con conocimientos en Frontend para apoyar.">
+    <meta name="twitter:image" content="https://manueldev.tech/img/photo/perfil.png">
+    <link rel="icon" type="image/png" href="img/icon/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light-mode');
+        }
+    </script>
 </head>
 
 <body>
-  <h1>Hoja de vida</h1>
-  <h3>Jorge Manuel Santana Blanco</h3>
-  <hr />
-  <img src="img/imagen.png" alt="Descripción de la imagen" />
-  <hr />
-  <a href="index.html">Mi persona</a>
-  <a href="page1.html">informacion personal</a>
-  <a href="page2.html">Estudios</a>
-  <a href="page3.html">Experiencia laboral</a>
-  <a href="page4.html">Referencias</a>
-  <a href="page5.html">formulario</a>
-  <h4>Perfil</h4>
-  <p>
-    Hola soy Jorge Manuel, soy un estudiante de ingenieria de sistemas y me
-    encanta la programacion y el desarrollo de software.<br />
-    Me gusta aprender cosas nuevas y siempre estoy buscando mejorar mis
-    habilidades.<br />
-    Me considero una persona responsable, puntual y comprometida con mis
-    estudios y trabajo. Me gusta trabajar en equipo y colaborar con mis
-    compañeros para lograr nuestros objetivos.<br />
-    Estoy emocionado por el futuro y las oportunidades que se me presenten.<br />
-    Espero que me puedan ayudar en mi carrera y que me puedan dar una
-    oportunidad de trabajar en un proyecto importante.<br />
-  </p>
+    <div class="background-effect"></div>
+    <div id="navbar-placeholder" data-path=""></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content hidden">
+                <p class="greeting">Hola, mi nombre es</p>
+                <h2 class="name">Jorge Manuel Santana.</h2>
+                <h3 class="subtitle typewriter-target" data-text="Desarrollador Backend en Python">Desarrollador Backend
+                    en Python</h3>
+                <p class="hero-description">
+                    Desarrollador enfocado en crear soluciones eficientes, escalables y seguras utilizando Python y
+                    FastAPI.
+                    Además, cuento con conocimientos en Frontend para brindar apoyo cuando sea necesario.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/jorge-manuel-santana-blanco-90a41a412" target="_blank"><img
+                            src="img/icon/dark/linkedin.svg" alt="LinkedIn" class="social-icon"></a>
+                    <a href="https://github.com/joker627" target="_blank"><img src="img/icon/dark/github.svg"
+                            alt="GitHub" class="social-icon"></a>
+                    <a href="mailto:manuel7xs@gmail.com"><img src="img/icon/dark/envelope.svg" alt="Email"
+                            class="social-icon"></a>
+                </div>
+                <div class="cv-download" style="margin-top: 30px;">
+                    <a href="docs/CV.pdf" download class="btn-primary">Descargar CV</a>
+                </div>
+            </div>
+            <div class="hero-image hidden">
+                <img src="img/photo/perfil.png" alt="Jorge Manuel Santana" class="profile-photo" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Sobre Mí Section -->
+        <section id="about-me" class="section">
+            <h2 class="section-title hidden">Sobre Mí</h2>
+            <div class="about-content hidden">
+                <p>
+                    Soy un desarrollador apasionado por el diseño de arquitecturas limpias y el desarrollo de APIs REST.
+                    Tengo experiencia práctica creando proyectos backend y aplicaciones web robustas, gestionando bases
+                    de datos relacionales y controlando versiones con Git.
+                </p>
+                <p>
+                    Actualmente me encuentro en la búsqueda de mis prácticas profesionales. Mi principal objetivo es
+                    seguir aprendiendo, enfrentar nuevos retos y aportar toda mi motivación a un equipo de trabajo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Habilidades Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title hidden">Habilidades Técnicas</h2>
+            <div class="skills-bento-grid">
+                <div class="bento-card hidden">
+                    <h3 class="bento-title">Backend & Lenguajes</h3>
+                    <div class="bento-tech-list">
+                        <div class="bento-tech-item">Python</div>
+                        <div class="bento-tech-item">SQL</div>
+                    </div>
+                </div>
+                <div class="bento-card hidden">
+                    <h3 class="bento-title">Frontend (Apoyo)</h3>
+                    <div class="bento-tech-list">
+                        <div class="bento-tech-item">HTML5</div>
+                        <div class="bento-tech-item">CSS3</div>
+                    </div>
+                </div>
+                <div class="bento-card hidden">
+                    <h3 class="bento-title">Frameworks & BD</h3>
+                    <div class="bento-tech-list">
+                        <div class="bento-tech-item">FastAPI</div>
+                        <div class="bento-tech-item">MySQL</div>
+                    </div>
+                </div>
+                <div class="bento-card hidden">
+                    <h3 class="bento-title">Herramientas</h3>
+                    <div class="bento-tech-list">
+                        <div class="bento-tech-item">Git & GitHub</div>
+                        <div class="bento-tech-item">Postman</div>
+                        <div class="bento-tech-item">Visual Studio Code</div>
+                        <div class="bento-tech-item">Vercel & Figma</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title hidden">Proyectos Destacados</h2>
+            <div class="projects-showcase">
+                <!-- Proyecto 1 -->
+                <article class="project-showcase-card hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/proyectos/uparshop.png" alt="Vista previa de Uparshop" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3>Uparshop</h3>
+                        <p class="project-subtitle">Plataforma de Comercio Electrónico (Backend)</p>
+                        <div class="project-desc-card">
+                            <p>
+                                Diseñé e implementé una API REST con FastAPI siguiendo Clean Architecture. Cuenta con
+                                autenticación segura mediante JWT, operaciones CRUD completas y bases de datos relacionales
+                                para gestionar productos, usuarios y categorías.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span><span>FastAPI</span><span>MySQL</span><span>JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://uparshop.page/" target="_blank" class="btn-primary btn-small"><img
+                                    src="img/icon/dark/external-link.svg" alt="Visitar Web" class="project-icon">
+                                Visitar Web</a>
+                            <a href="pages/uparshop.html" class="btn-primary btn-small">Ver Detalles</a>
+                            <a href="https://github.com/joker627/Uparshop" target="_blank" class="btn-primary btn-secondary btn-small"><img
+                                    src="img/icon/dark/github.svg" alt="Código" class="project-icon"> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-showcase-card reversed hidden">
+                    <div class="project-content">
+                        <h3>YumeZone</h3>
+                        <p class="project-subtitle">Plataforma Web de Lectura (Fullstack)</p>
+                        <div class="project-desc-card">
+                            <p>
+                                Desarrollo de una interfaz responsiva que consume APIs REST desarrolladas en FastAPI.
+                                Optimizada para dispositivos móviles y escritorio, integrando una base de datos MySQL para
+                                la persistencia de información.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>JavaScript</span><span>HTML/CSS</span><span>FastAPI</span><span>MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://yumezone.pages.dev/" target="_blank" class="btn-primary btn-small"><img
+                                    src="img/icon/dark/external-link.svg" alt="Visitar Web" class="project-icon">
+                                Visitar Web</a>
+                            <a href="https://github.com/joker627/YumeZone" target="_blank" class="btn-primary btn-secondary btn-small"><img
+                                    src="img/icon/dark/github.svg" alt="Código" class="project-icon"> Código</a>
+                            <span class="status-badge">En desarrollo</span>
+                        </div>
+                    </div>
+                    <div class="project-image-wrapper">
+                        <img src="img/proyectos/yumezone.png" alt="Vista previa de YumeZone" class="project-image">
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-showcase-card hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/proyectos/votasena.png" alt="Vista previa de VotaSena" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3>VotaSena</h3>
+                        <p class="project-subtitle">Plataforma de Votación y Dashboard Analítico</p>
+                        <div class="project-desc-card">
+                            <p>
+                                Desarrollo de una plataforma de votación en vivo con un dashboard analítico interactivo para visualizar los resultados en tiempo real.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span><span>FastAPI</span><span>JavaScript</span><span>HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://votasena.pages.dev/" target="_blank" class="btn-primary btn-small"><img
+                                    src="img/icon/dark/external-link.svg" alt="Visitar Web" class="project-icon">
+                                Visitar Web</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Educación Section -->
+        <section id="education" class="section">
+            <h2 class="section-title hidden">Educación</h2>
+            <div class="education-timeline">
+                <div class="edu-item hidden">
+                    <div class="edu-date">Actualidad</div>
+                    <h3>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</h3>
+                    <p class="edu-inst">SENA (Servicio Nacional de Aprendizaje)</p>
+                    <p class="edu-desc">Formación integral en análisis y desarrollo de software. Durante este proceso
+                        descubrí que el área que más me apasiona es el Backend.</p>
+                </div>
+                <div class="edu-item hidden">
+                    <div class="edu-date">Grado Obtenido</div>
+                    <div class="edu-date">2023</div>
+                    <h3>Bachiller Técnico con Énfasis en Sistemas</h3>
+                    <p class="edu-inst">Institución Educativa Rafael Valle Meza</p>
+                    <p class="edu-desc">Educacion Media tecnica con enfasis en sistemas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contact" class="section contact-section hidden">
+            <h2 class="section-title">Ponte en Contacto</h2>
+            <p class="contact-desc">Estoy en busca de una oportunidad de prácticas donde pueda seguir formándome como desarrollador. Mi bandeja de entrada siempre está abierta para hablar sobre tecnología, posibles proyectos o vacantes de aprendizaje.</p>
+            
+            <div class="contact-grid">
+                <!-- Email -->
+                <a href="mailto:manuel7xs@gmail.com" class="contact-card">
+                    <div class="contact-card-icon">
+                        <img src="img/icon/dark/envelope.svg" alt="Email" class="contact-icon">
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">manuel7xs@gmail.com</span>
+                    </div>
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/573122123153" target="_blank" class="contact-card">
+                    <div class="contact-card-icon">
+                        <img src="img/icon/dark/whatsapp.svg" alt="WhatsApp" class="contact-icon">
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-value">+57 312 212 3153</span>
+                    </div>
+                </a>
+                
+                <!-- Ubicación -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <img src="img/icon/dark/map-marker.svg" alt="Ubicación" class="contact-icon">
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-label">Ubicación</span>
+                        <span class="contact-value">Valledupar, Cesar, Colombia</span>
+                    </div>
+                </div>
+            </div>
+            <a href="mailto:manuel7xs@gmail.com" class="btn-primary mt-30">Hablemos</a>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="js/script.js"></script>
 </body>
 
 </html>

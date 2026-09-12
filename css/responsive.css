@@ -1,0 +1,176 @@
+/* ========================================= */
+/* Media Queries (Responsive Design)         */
+/* ========================================= */
+@media (max-width: 1024px) {
+    main {
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar Hamburger Menu */
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .main-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background: rgba(5, 5, 8, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        padding-top: 80px;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        margin-top: 0;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    :root.light-mode .main-nav {
+        background: rgba(248, 250, 252, 0.95);
+    }
+
+    .main-nav.active {
+        transform: translateX(0);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 30px;
+        gap: 35px;
+    }
+
+    .main-nav ul li a {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .nav-container {
+        padding: 15px 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 20px;
+        gap: 30px;
+    }
+
+    .hero-content .name {
+        font-size: 40px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        margin: 0 auto 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .foto-perfil {
+        width: 220px;
+        height: 220px;
+        box-shadow: 0 0 40px var(--accent-glow);
+    }
+
+    /* General Settings */
+    main {
+        padding-top: 160px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-title::after {
+        width: 80px;
+        margin-left: 10px;
+    }
+
+    /* Projects Grid - prevent overflow on tablet/mobile */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Mobile small tweaks */
+    .hero-content .name {
+        font-size: 32px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 18px;
+    }
+
+    .nav-container {
+        padding: 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Projects Grid - force 1 column and fit screen */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-links a,
+    .project-links span {
+        margin-right: 0;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Project Detail Page */
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-detail-header h2 {
+        font-size: 28px;
+    }
+
+    .blog-header h2 {
+        font-size: 28px;
+    }
+}
