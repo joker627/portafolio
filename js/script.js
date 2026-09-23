@@ -36,6 +36,15 @@ const loadLayout = () => {
                 closeIcon.style.display = 'none';
             });
         });
+
+        // Close menu on scroll
+        window.addEventListener('scroll', () => {
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                openIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        });
     }
 
     // Inicializar nuevas funcionalidades

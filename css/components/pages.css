@@ -1,0 +1,126 @@
+/* Blog Page Styles */
+.blog-header {
+    text-align: center;
+    padding: 100px 20px 50px;
+}
+
+.blog-header h2 {
+    font-size: 40px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.blog-header p {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+/* Project Details Page Styles */
+.project-detail-header {
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.project-detail-header h2 {
+    font-size: 56px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+    font-weight: 800;
+}
+
+.project-detail-header .subtitle {
+    color: var(--accent);
+    font-family: monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-body {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.project-section {
+    margin-bottom: 60px;
+}
+
+.project-section h3 {
+    color: var(--text-primary);
+    font-size: 28px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.project-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.project-section p {
+    margin-bottom: 20px;
+}
+
+.project-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-section ul li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.project-section ul li::before {
+    content: '▪';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.project-tech-list span {
+    background: rgba(100, 255, 218, 0.05);
+    color: var(--accent);
+    padding: 8px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    font-family: monospace;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.project-tech-list span:hover {
+    background: rgba(100, 255, 218, 0.15);
+    border-color: rgba(100, 255, 218, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}

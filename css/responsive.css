@@ -1,6 +1,4 @@
-/* ========================================= */
-/* Media Queries (Responsive Design)         */
-/* ========================================= */
+/* Media Queries       */
 @media (max-width: 1024px) {
     main {
         padding-top: 120px;

@@ -1,0 +1,14 @@
+/* About Section */
+.about-content {
+    color: var(--text-secondary);
+    font-size: 18px;
+    max-width: 700px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-content strong {
+    color: var(--accent);
+}

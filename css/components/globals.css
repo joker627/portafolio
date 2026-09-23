@@ -1,0 +1,168 @@
+:root {
+    --bg-main: #050508;
+    --bg-secondary: #0a0a10;
+    --bg-card: rgba(20, 20, 30, 0.4);
+    --text-primary: #f8f9fa;
+    --text-secondary: #a1a1aa;
+    --accent: #9b87f5;
+    --accent-glow: rgba(155, 135, 245, 0.4);
+    --font-sans: 'Inter', 'Outfit', 'Segoe UI', Roboto, Helvetica, sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --border-color: rgba(155, 135, 245, 0.15);
+    --bg-header: rgba(5, 5, 8, 0.7);
+    --bg-card-solid: #0f0f15;
+    --bg-gradient-end: rgba(20, 20, 30, 0.4);
+}
+
+:root.light-mode {
+    --bg-main: #f8f9fa;
+    --bg-secondary: #f0f0f4;
+    --bg-card: rgba(255, 255, 255, 0.7);
+    --bg-card-solid: #ffffff;
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --accent: #7c3aed;
+    --accent-glow: rgba(124, 58, 237, 0.2);
+    --border-color: rgba(124, 58, 237, 0.15);
+    --bg-header: rgba(248, 249, 250, 0.8);
+    --bg-gradient-end: rgba(230, 230, 240, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+    letter-spacing: 0.3px;
+}
+
+.background-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 10% 20%, var(--accent-glow), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.1), transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(5, 5, 8, 1) 40%, transparent 100%);
+    pointer-events: none;
+    transition: background 0.8s ease;
+}
+
+:root.light-mode .background-effect {
+    background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.15), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08), transparent 40%);
+}
+
+:root.light-mode .project-card,
+:root.light-mode .skill-card {
+    position: relative;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+:root.light-mode .project-card:hover,
+:root.light-mode .skill-card:hover {
+    border-color: #111111;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+
+/* Icon Sizes */
+.menu-icon,
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.project-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(155, 135, 245, 0.05);
+    color: var(--accent);
+    border: 1px solid rgba(155, 135, 245, 0.3);
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background: rgba(155, 135, 245, 0.15);
+    border-color: rgba(155, 135, 245, 0.6);
+    box-shadow: 0 4px 15px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Layout */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 20px 0;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: var(--text-primary);
+    font-size: 32px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: var(--border-color);
+    width: 300px;
+    margin-left: 20px;
+}

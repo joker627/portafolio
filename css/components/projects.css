@@ -1,0 +1,207 @@
+/* Projects */
+.projects-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.project-showcase-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.project-showcase-card.reversed {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.project-image-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid var(--border-color);
+}
+
+.project-showcase-card:hover .project-image-wrapper {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), filter 0.6s ease;
+    filter: brightness(0.8) grayscale(0.2);
+}
+
+.project-showcase-card:hover .project-image {
+    transform: scale(1.03);
+    filter: brightness(1) grayscale(0);
+}
+
+.project-content {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+}
+
+.project-showcase-card.reversed .project-content {
+    text-align: right;
+}
+
+.project-content h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+.project-subtitle {
+    color: var(--accent);
+    font-size: 14px;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.project-desc-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 25px;
+    border-radius: 12px;
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-left: -100px;
+    transition: all 0.3s ease;
+}
+
+.project-showcase-card.reversed .project-desc-card {
+    margin-left: 0;
+    margin-right: -100px;
+}
+
+.project-showcase-card:hover .project-desc-card {
+    border-color: var(--accent);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.project-showcase-card.reversed .project-tech {
+    justify-content: flex-end;
+}
+
+.project-tech span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-primary);
+    background: rgba(155, 135, 245, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tech-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));
+}
+
+.project-showcase-card:hover .project-tech span {
+    border-color: rgba(155, 135, 245, 0.3);
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.project-showcase-card.reversed .project-links {
+    justify-content: flex-end;
+}
+
+.project-links a {
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.status-badge {
+    background: rgba(155, 135, 245, 0.1);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .project-showcase-card,
+    .project-showcase-card.reversed {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .project-image-wrapper {
+        order: 1;
+        border-radius: 12px;
+        width: 100%;
+    }
+
+    .project-content,
+    .project-showcase-card.reversed .project-content {
+        order: 2;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .project-desc-card {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    .project-showcase-card.reversed .project-desc-card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project-showcase-card.reversed .project-tech,
+    .project-showcase-card.reversed .project-links {
+        justify-content: flex-start;
+    }
+}

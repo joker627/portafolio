@@ -125,7 +125,7 @@ nav a:hover {
 
 
 
-﻿:root {
+:root {
     --bg-main: #050508;
     /* Deep space black */
     --bg-secondary: #0a0a10;
@@ -352,4 +352,3 @@ nav a:hover {
 :root.light-mode .theme-btn:hover {
     background: rgba(15, 118, 110, 0.1);
 }
-
